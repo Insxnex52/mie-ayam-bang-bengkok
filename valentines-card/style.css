@@ -1,0 +1,467 @@
+body {
+  background-color: #E08282;
+}
+
+#timeDisplay {
+      font-size: 20px;
+      margin: 0px;
+      position: absolute;
+      top:10.5%;
+      left:37.5%;
+      color:#e08282;
+      text-shadow: 2px 1px black;
+    }
+#icon svg {
+      vertical-align:middle;
+    display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+#seekBar {
+    position: absolute;
+      width: 225px;
+      margin: 0 12.5px;
+    background: white;
+    outline: none;
+  border-radius: 10px;
+    top:14.5%;
+    -webkit-appearance: none;
+  appearance: none;
+    box-shadow: 2px 2px 2px 2px black;
+    }
+
+#seekBar::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-moz-range-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-ms-fill-lower,
+#seekBar::-ms-fill-upper {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+/* Thumb */
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: -6px; /* Align thumb with track */
+}
+
+#seekBar:focus::-webkit-slider-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-moz-range-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-ms-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+/* Remove outline for Firefox */
+#seekBar:focus {
+  outline: none;
+}
+
+/* Extra for MS Edge/IE */
+#seekBar::-ms-tooltip {
+  display: none;
+}
+
+#toggleBtn {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+  .music{
+      display:block;
+      background-image: url("photo.jpg");
+      background-repeat: no-repeat;
+      background-size: 250px 250px;
+      width: 250px;
+      height: 125px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 2px 2px black;
+  }
+
+.music h3{
+    position: absolute;
+    top: 2.5%;
+    left: 7.5%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+}
+
+.music h5{
+    position: absolute;
+    top: 6%;
+    left: 7.5%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+    opacity: 0.5;
+}
+
+  .music button{
+      position: absolute;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      border: none;
+      top:9.5%;
+      left:1.5%;
+  }
+
+.button{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  button{
+    font-family: 'Amatic SC', cursive;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 20px;
+     background-color: #E08282;
+     box-shadow: 3px 3px black;
+     cursor: pointer;
+     animation: fadeIn 2s ease-in-out forwards;
+     animation-delay: 5s;
+     opacity: 0; 
+     transition: .5s ease;
+  }
+}
+
+button:hover{
+  background-color:black;
+  color: #E08282;
+  border-color: #E08282;
+  transform: scale(0.9);
+  transition: .5s ease;
+}
+
+.somplak p:nth-child(1){
+  text-align: center;
+   position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  margin: 0;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  animation: fadeIn 1s linear forwards;
+}
+
+.somplak p:nth-child(2){
+  position: absolute;
+  top: 37.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  margin: 0;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.envelope-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -20%);
+
+}
+
+.envelope {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  background-color: #C9D0D2;
+}
+
+.envelope .envelope__card {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 0px;
+  background-color: #f5f6d6;
+
+}
+
+.envelope .envelope__card.open {
+  -webkit-animation: cardJump .5s ease .5s forwards;
+  -o-animation: cardJump .5s ease .5s forwards;
+  animation: cardJump .5s ease .5s forwards;
+  z-index: 1;
+}
+
+.envelope .enveloper__card-text {
+  padding: 10px 20px;
+  font-size: 37.5px;
+  margin: 0;
+  color: black;
+  font-weight: 25px;
+  font-family: 'Amatic SC', cursive;
+  animation: somplak 1s linear forwards;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+.envelope .envelope__side {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 2;
+   animation: fadeIn 1s linear forwards;
+  animation-delay: 2s;
+  opacity: 0%;
+}
+
+.envelope .envelope__side--left {
+  left: 0;
+  border-width: 100px 0 100px 150px;
+  border-color: transparent transparent transparent #ffffff;
+  animation: slideinBottom 1s linear forwards;
+  animation-duration: 1s ;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.envelope .envelope__side--right {
+  right: 0;
+  border-width: 100px 150px 100px 0;
+  border-color: transparent #ffffff transparent transparent;
+  animation: slideinBottom 1s linear forwards;
+  animation-duration: 1s ;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.envelope .envelope__side--bottom {
+  top: auto;
+  left: 0;
+  bottom: 0;
+  border-width: 0 150px 100px 150px;
+  border-color: transparent transparent #ecf0f1 transparent;
+  animation: slideinBottom 1s linear forwards;
+  animation-duration: 1s ;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.envelope .envelope__side--top {
+  top: 0;
+  left: 0;
+  bottom: auto;
+  border-width: 100px 150px 0 150px;
+  border-color: #ecf0f1 transparent transparent transparent;
+  z-index: 1;
+  animation: slideinBottom 1s linear forwards;
+  animation-duration: 1s ;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.envelope.open > .envelope__side--top {
+  top: -100px;
+  border-width: 0 150px 100px 150px;
+  border-color: transparent transparent #C9D0D2 transparent;
+  animation: slideinBottom 1s linear forwards;
+  animation-duration: 1s ;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.heart {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -25%;
+  margin-left: -25px;
+  width: 50px;
+  fill: red;
+  z-index: 2;
+  transition: 0.2s;
+  animation: slideinBottom linear forwards;
+  animation-duration: 0.5s ;
+  animation-delay: 1.5s;
+  opacity: 1;
+}
+
+.envelope:hover .heart {
+  transform: scale(1.2);
+  transition: .5s ease;
+}
+
+.envelope.open:hover .heart {
+  transform: none;
+}
+
+.tossing{
+  animation: fadeIn 2.5s linear forwards 2.5s,tossing .5s infinite ease 1s;
+  -webkit-animation: fadeIn 2.5s linear forwards 2.5s,tossing .5s infinite ease 1s;
+  opacity: 0;
+}
+
+@keyframes tossing {
+  0% {
+      transform: rotate(-4deg);
+  }
+  50% {
+      transform: rotate(4deg);
+  }
+  100% {
+      transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes tossing {
+  0% {
+      -webkit-transform: rotate(-4deg);
+  }
+  50% {
+      -webkit-transform: rotate(4deg);
+  }
+  100% {
+      -webkit-transform: rotate(-4deg);
+  }
+}
+
+@keyframes cardJump {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-200px);
+  }
+}
+
+@-webkit-keyframes cardJump {
+  from {
+      -webkit-transform: translateY(0);
+  }
+  to {
+      -webkit-transform: translateY(-200px);
+  }
+}
+
+@keyframes fadeInOut{
+  0%,100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes slideinBottom{
+  from{
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideinBottom{
+  from{
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes somplak{
+  from{
+    opacity: 0;
+  }
+  to{
+
+    opacity: 1;
+  }
+}
+
+@keyframes beating{
+  from{
+    scale: .7;
+  }
+  to{
+    scale: 1;
+  }
+}
