@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="h1">
+  <h1>Our memories!</h1>
+  </div>
+  <div class="gallery">
+    <div class="music">
+        <h3>Suatu hari di bulan juni</h3>
+        <h5>Tulus</h5>
+    <audio id="myAudio" src="Tulus-Satu-Hari-di-Bulan-Juni.mp3" autoplay></audio>
+    <button id="toggleBtn" aria-label="Play/Pause">
+        <span id="icon">
+      <!-- Play SVG by default -->
+      <svg viewBox="0 0 32 32"><polygon points="8,4 28,16 8,28" fill="#e08282"/></svg>
+        </span>
+    </button>
+        <span id="timeDisplay">0:00 / 0:00</span>
+        <input type="range" id="seekBar" value="0" min="0" step="1">
+    </div>
+    <ul class="cards" id="container">
+      <li class="active">
+        <div class="img" id="container">
+        <img class="active"src="photo.jpg">
+          <img class="active" src="photoB.jpg">
+          <img class="active" src="photoC.jpg">
+        </div>
+        <h2>02-02-2025</h2>
+      </li>
+      <li>
+        <div class="img">
+        <img class="active" src="photo2.jpg">
+          <img class="active" src="photo2B.jpg">
+          <img class="active" src="photo2C.jpg">
+          <img class="active" src="photo2D.jpg">
+        </div>
+        <h2>03-02-2025</h2>
+      </li>
+      <li>
+        <div class="img">
+        <img class="active" src="photo3.jpg">
+          <img class="active" src="photo3B.jpg">
+          <img class="active" src="photo3C.jpg">
+          <img class="active" src="photo3D.jpg">
+          <img class="active" src="photo3E.jpg">
+          <img class="active" src="photo3H.jpg">
+          <img class="active" src="photo3F.jpg">
+          <img class="active" src="photo3G.jpg">
+      </div>
+        <h2>14-02-2025</h2>
+      </li>
+      <li>
+        <div class="img">
+        <img class="active" src="photo4.jpg">
+          <img class="active" src="photo4B.jpg">
+          <img class="active" src="photo4C.jpg">
+          <img class="active" src="photo4E.jpg">
+          <img class="active" src="photo4F.jpg">
+        </div>
+        <h2>04-03-2025</h2>
+      </li>
+      <li>
+        <div class="img">
+        <img class="active" src="photo5.jpg">
+          <img class="active" src="photo5B.jpg">
+          <img class="active" src="photo5C.jpg">
+          <img class="active" src="photo5D.jpg">
+          <img class="active" src="photo5E.jpg">
+          <img class="active" src="photo5F.jpg">
+          <img class="active" src="photo5G.jpg">
+          <img class="active" src="photo5H.jpg">
+          <img class="active" src="photo5I.jpg">
+          <img class="active" src="photo5J.jpg">
+          <img class="active" src="photo5K.jpg">
+        </div>
+        <h2>30-04-2025</h2>
+      </li>
+    </ul>
+    <div class="controls">
+      <button id="prev">PREV</button>
+      <button id="next">NEXT</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
