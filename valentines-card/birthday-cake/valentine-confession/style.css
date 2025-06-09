@@ -1,0 +1,395 @@
+*{
+	box-sizing: border-box;
+}
+
+h1,
+p {
+	font-family: "Quicksand";
+  font-optical-sizing: auto;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+body {
+	margin: 0px;
+}
+
+#timeDisplay {
+      font-size: 20px;
+      margin: 0px;
+      position: absolute;
+      top:62.5%;
+      left:60.5%;
+      color:#e08282;
+      text-shadow: 2px 1px black;
+    }
+#icon svg {
+      vertical-align:middle;
+    display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+#seekBar {
+    position: absolute;
+      width: 225px;
+      margin: 0 12.5px;
+    background: white;
+    outline: none;
+  border-radius: 10px;
+    top:85%;
+    -webkit-appearance: none;
+  appearance: none;
+    box-shadow: 2px 2px 2px 2px black;
+    }
+
+#seekBar::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-moz-range-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-ms-fill-lower,
+#seekBar::-ms-fill-upper {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+/* Thumb */
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: -6px; /* Align thumb with track */
+}
+
+#seekBar:focus::-webkit-slider-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-moz-range-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-ms-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+/* Remove outline for Firefox */
+#seekBar:focus {
+  outline: none;
+}
+
+/* Extra for MS Edge/IE */
+#seekBar::-ms-tooltip {
+  display: none;
+}
+
+#toggleBtn {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+  .music{
+      display:flex;
+      background-image: url("photo.jpg");
+      background-repeat: no-repeat;
+      background-size: 250px 250px;
+      width: 250px;
+      height: 125px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 2px 2px black;
+  	position: relative;
+    top: 0.5%;
+  }
+
+.music h3{
+    position: absolute;
+    top: 2.5%;
+    left: 7.5%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+}
+
+.music h5{
+    position: absolute;
+    top: 25%;
+    left: 7.5%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+    opacity: 0.5;
+}
+
+  .music button{
+      position: absolute;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      border: none;
+      top:50.5%;
+      left:1.5%;
+  }
+
+.instruction p{
+	text-align: center;
+	position: absolute;
+	font-size: 1.6rem;
+	color: rgba(255, 0, 0, 0.554);
+	transform: translate(-50%, -50%);
+	animation: fadeIn 1s linear forwards;
+}
+
+.instruction p:nth-child(1){
+	animation: fadeIn 1s linear forwards;
+	top: 30%;
+	left: 50%;
+}
+
+.instruction p:nth-child(2){
+	animation: fadeIn 1s linear forwards;
+	animation-delay: 2s;
+	opacity: 0;
+	top: 36%;
+	left: 50%;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.heart {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: transform 2s;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.heart > img {
+	width: 50px;
+	height: auto;
+
+	animation-name: beat;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+.message {
+	padding: 25px;
+	background-color: #eee;
+	font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+	font-size: clamp(16px, 10vw, 17px);
+	text-align: justify;
+	line-height: 1.5em;
+	width: 80%;
+	max-width: 550px;
+	height: 78%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+
+	animation-name: openmsg;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	border-radius: 5px;
+	overflow: scroll;
+	scrollbar-width: 1;
+}
+ 
+.message .sincere{
+	text-align: left;
+	font-family: "Cinzel, serif";
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.message .sincere p{
+	margin: 0;
+}
+
+.message .sincere button{
+	animation: fadeIn 1s linear forwards;
+	animation-delay: 5s;
+	opacity: 0;
+	text-align: center;
+	font-family: "Cinzel, serif";
+background-color: #f48fb1;
+	position: absolute;
+	border: none;
+	top: auto;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 2px 2px black;
+	border-radius: 20px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+button:hover{
+}
+
+@keyframes beat {
+	0% {
+		width: 50px;
+	}
+	25% {
+		width: 58px;
+	}
+	30% {
+		width: 50px;
+	}
+	50% {
+		width: 45px;
+	}
+	60% {
+		width: 50px;
+	}
+	75% {
+		width: 58px;
+	}
+	100% {
+		width: 50px;
+	}
+}
+
+@keyframes openmsg {
+	0% {
+		height: 0px;
+		padding: 0px 20px;
+	}
+	100% {
+		height: 75%;
+		padding: 20px 20px;
+	}
+}
+
+@keyframes heartMove {
+	0% {
+		top: 50%
+	}
+	100% {
+		top: 85%;
+		transform: translate(-50%, 0);
+	}
+}
+
+.openNor {
+	animation-direction: normal;
+	animation-play-state: running;
+}
+
+.closeNor {
+	animation-direction: reverse;
+	animation-play-state: running;
+}
+
+.no-anim {
+	animation: none;
+}
+
+.closed {
+	height: 0px;
+	padding: 0px 20px;
+}
+
+.bottom {
+	bottom: 5px;
+}
+
+.openHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+
+.closeHer {
+	animation-name: heartMove;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-direction: reverse;
+	animation-fill-mode: forwards;
+}
+
+.beating > img {
+	animation-name: beat;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+
+.openedHer {
+	top: 85%;
+	transform: translate(-50%, 0);
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
