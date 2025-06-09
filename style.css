@@ -1,0 +1,406 @@
+body{
+    background-color: #e08282;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  #timeDisplay {
+      font-size: 20px;
+      margin: 0px;
+      position: absolute;
+      top:20%;
+      left:62.5%;
+      color:#e08282;
+      text-shadow: 2px 1px black;
+    }
+#icon svg {
+      vertical-align:middle;
+    display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+#seekBar {
+    position: absolute;
+      width: 225px;
+      margin: 0 12.5px;
+    background: white;
+    outline: none;
+  border-radius: 10px;
+    top:27%;
+    -webkit-appearance: none;
+  appearance: none;
+    box-shadow: 2px 2px 2px 2px black;
+    }
+
+#seekBar::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-moz-range-track {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+#seekBar::-ms-fill-lower,
+#seekBar::-ms-fill-upper {
+  height: 6px;
+  background: #e08282;
+  border-radius: 3px;
+}
+
+/* Thumb */
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: -6px; /* Align thumb with track */
+}
+
+#seekBar:focus::-webkit-slider-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-moz-range-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+#seekBar::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e08282;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#seekBar:focus::-ms-thumb {
+  background: #e08282;
+  border-color: #fff;
+}
+
+/* Remove outline for Firefox */
+#seekBar:focus {
+  outline: none;
+}
+
+/* Extra for MS Edge/IE */
+#seekBar::-ms-tooltip {
+  display: none;
+}
+
+#toggleBtn {
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+  .music{
+      display:block;
+      background-image: url("photo.jpg");
+      background-repeat: no-repeat;
+      background-size: 250px 250px;
+      width: 250px;
+      height: 125px;
+      border-radius: 25px;
+      box-shadow: 2px 2px 2px 2px black;
+  }
+
+.music h3{
+    position: absolute;
+    top: 3%;
+    left: 9.5%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+}
+
+.music h5{
+    position: absolute;
+    top: 7.5%;
+    left: 10%;
+    color: #e08282;
+    text-shadow: 2px 2px black;
+    opacity: 0.5;
+}
+
+  .music button{
+      position: absolute;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      border: none;
+      top:17.5%;
+      left:1.5%;
+  }
+
+.button button{
+    background-color: #e08282;
+    font-size: 18px;
+    position: absolute;
+    top: 110%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 2px 2px black;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 15.5s;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+    }
+
+    .button:hover{
+      background-color: black;
+      color: #e08282;
+      border-color: #e08282;
+      transition: .5s ease;
+    }
+
+ .somplak p {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+.somplak p:nth-child(1) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 17ch; /* Adjust to control the visible text length */
+      animation: type 2s steps(17, end), blink 2s step-end infinite;
+    }
+
+    .somplak p:nth-child(2) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 18ch; /* Adjust to control the visible text length */
+      -webkit-animation: type2 5s steps(18, end), blink .5s step-end infinite alternate;
+      animation: type2 2s steps(18, end), blink 2s step-end infinite;
+       -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
+
+    .somplak p:nth-child(3) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 6s;
+       animation-fill-mode: forwards;
+    }
+
+      .somplak p:nth-child(4) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 9s;
+       animation-fill-mode: forwards;
+    }
+
+      .somplak p:nth-child(5) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 11s;
+       animation-fill-mode: forwards;
+    }
+
+    .somplak p:nth-child(6) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 13s;
+       animation-fill-mode: forwards;
+    }
+
+    .somplak p:nth-child(7) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 17s;
+       animation-fill-mode: forwards;
+    }
+
+    .somplak p:nth-child(8) {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      border-right: 5px solid black; /* Cursor effect */
+      width: 32.5ch; /* Adjust to control the visible text length */
+      -webkit-animation: type3 5s steps(17, end), blink .5s step-end infinite alternate;
+      animation: type3 2s steps(17, end), blink 2s step-end infinite;
+      -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
+      animation-delay: 18.5s;
+       animation-fill-mode: forwards;
+    }
+
+    audio{
+        padding-bottom: 6px;
+        height: 60px;
+        width: 300px;
+        border: none;
+        border-radius: 35px;
+        background-color: black;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    /* Typing effect */
+    @keyframes type {
+      from {
+        width: 0;
+      }
+      to {
+        width: 17ch;
+      }
+    }
+
+    /* Blinking cursor effect */
+    @keyframes blink {
+      from {
+        border-color: transparent;
+      }
+      to {
+        border-color: black;
+      }
+    }
+
+    @keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+   from{
+    opacity: 0;
+   }
+   to{
+    opacity: 1;
+   }
+}
+
+
